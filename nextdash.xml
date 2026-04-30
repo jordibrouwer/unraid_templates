@@ -7,7 +7,7 @@
   <Support>https://github.com/jordibrouwer/nextdash/issues</Support>
   <ReadMe>https://raw.githubusercontent.com/jordibrouwer/nextdash/main/README.md</ReadMe>
   <TemplateURL>https://raw.githubusercontent.com/jordibrouwer/unraid_templates/main/nextdash.xml</TemplateURL>
-  <Icon>https://github.com/jordibrouwer/nextdash/raw/main/favicon.png</Icon>
+  <Icon>https://raw.githubusercontent.com/jordibrouwer/nextdash/main/favicon.png</Icon>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
