@@ -21,9 +21,10 @@
   <ExtraSearchTerms>bookmarks dashboard homelab keyboard-driven self-hosted startpage</ExtraSearchTerms>
 
   <Changes>
-### 2026.08.29 - v1.4.0
+### 2026.08.29 - v1.4.x
 - Added: Archiving and local page preservation
 - Added: Widgets (Archive, Trash, Blind Spots, Duplicates, Backups)
+- Added: Custom widgets (sonarr, sabnzbd, speed-tracker and 23 more!)
 - Added: New import sources
 - Added: Webhooks and MCP support
 - Fixed: Security and correctness issues found in static analysis
