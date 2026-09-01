@@ -15,6 +15,23 @@
   <Overview>A lightweight, self-hosted bookmark dashboard that features a minimalist, keyboard-driven interface with extensive customization options, making it the perfect personal dashboard for power users. Based on the excellent ThinkDashboard.</Overview>
   <Category>Network:Web Tools:Utilities</Category>
 
+  <Requires>Docker/self-hosted deployment. No external database required — data is stored locally in the mapped AppData path.</Requires>
+  <License>https://github.com/jordibrouwer/nextdash/blob/main/LICENSE</License>
+  <WebPage>https://nextdash.cc</WebPage>
+  <ExtraSearchTerms>bookmarks dashboard homelab keyboard-driven self-hosted startpage</ExtraSearchTerms>
+
+  <Changes>
+### 2026.08.29 - v1.4.0
+- Added: Archiving and local page preservation
+- Added: Widgets (Archive, Trash, Blind Spots, Duplicates, Backups)
+- Added: New import sources
+- Added: Webhooks and MCP support
+- Fixed: Security and correctness issues found in static analysis
+
+### v1.3.x
+- Added: Dead-link detection
+  </Changes>
+
   <Config Name="WebUI Port"
           Target="8080"
           Default="8103"
@@ -39,4 +56,9 @@
   <Screenshot>https://github.com/jordibrouwer/nextdash/raw/main/screenshots/nextdash-2.png</Screenshot>
   <Screenshot>https://github.com/jordibrouwer/nextdash/raw/main/screenshots/nextdash-3.png</Screenshot>
   <Screenshot>https://github.com/jordibrouwer/nextdash/raw/main/screenshots/nextdash-4.png</Screenshot>
+  <Screenshot>https://github.com/jordibrouwer/nextdash/raw/main/screenshots/nextdash-5.png</Screenshot>
+  <Screenshot>https://github.com/jordibrouwer/nextdash/raw/main/screenshots/nextdash-6.png</Screenshot>
+  <Screenshot>https://github.com/jordibrouwer/nextdash/raw/main/screenshots/nextdash-7.png</Screenshot>
+  <Screenshot>https://github.com/jordibrouwer/nextdash/raw/main/screenshots/nextdash-8.png</Screenshot>
+  <Screenshot>https://github.com/jordibrouwer/nextdash/raw/main/screenshots/nextdash-9.png</Screenshot>
 </Container>
