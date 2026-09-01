@@ -25,7 +25,7 @@
 - Added: Archiving and local page preservation
 - Added: Widgets (Archive, Trash, Blind Spots, Duplicates, Backups)
 - Added: Custom widgets (sonarr, sabnzbd, speed-tracker and 23 more!)
-- Added: New import sources
+- Added: New import sources (like raindrop, netscape and more..)
 - Added: Webhooks and MCP support
 - Fixed: Security and correctness issues found in static analysis
 
