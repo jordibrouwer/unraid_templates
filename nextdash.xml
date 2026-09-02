@@ -1,37 +1,50 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>NextDash</Name>
-  <Repository>ghcr.io/jordibrouwer/nextdash:latest</Repository>
-  <Registry>https://github.com/jordibrouwer/nextdash</Registry>
-  <Project>https://github.com/jordibrouwer/nextdash</Project>
+  <Repository>foobar1452/nextdash:latest</Repository>
+  <Registry>https://hub.docker.com/r/foobar1452/nextdash</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
   <Support>https://github.com/jordibrouwer/nextdash/issues</Support>
+  <Project>https://www.nextdash.cc</Project>
   <ReadMe>https://raw.githubusercontent.com/jordibrouwer/nextdash/main/README.md</ReadMe>
   <TemplateURL>https://raw.githubusercontent.com/jordibrouwer/unraid_templates/main/nextdash.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/jordibrouwer/nextdash/main/favicon.png</Icon>
-  <Network>bridge</Network>
-  <Privileged>false</Privileged>
-  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <Icon>https://github.com/jordibrouwer/nextdash/blob/main/static/nextdash-logo.png?raw=true</Icon>
   <ExtraParams>--restart unless-stopped</ExtraParams>
-  <Overview>A lightweight, self-hosted bookmark dashboard that features a minimalist, keyboard-driven interface with extensive customization options, making it the perfect personal dashboard for power users. Based on the excellent ThinkDashboard.</Overview>
-  <Category>Network:Web Tools:Utilities</Category>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText>Find NextDash useful? Consider supporting the project.</DonateText>
+  <DonateLink>https://github.com/sponsors/jordibrouwer</DonateLink>
+  <Requires/>
 
-  <Requires>Docker/self-hosted deployment. No external database required — data is stored locally in the mapped AppData path.</Requires>
-  <License>https://github.com/jordibrouwer/nextdash/blob/main/LICENSE</License>
-  <WebPage>https://nextdash.cc</WebPage>
-  <ExtraSearchTerms>bookmarks dashboard homelab keyboard-driven self-hosted startpage</ExtraSearchTerms>
+  <Overview>
+NextDash is a lightweight, self-hosted bookmark dashboard that features a minimalist, keyboard-driven interface with extensive customization options, making it the perfect personal dashboard for power users. Based on the excellent ThinkDashboard.
 
-  <Changes>
-### 2026.08.29 - v1.4.x
-- Added: Archiving and local page preservation
-- Added: Widgets (Archive, Trash, Blind Spots, Duplicates, Backups)
-- Added: Custom widgets (sonarr, sabnzbd, speed-tracker and 23 more!)
-- Added: New import sources (like raindrop, netscape and more..)
-- Added: Webhooks and MCP support
-- Fixed: Security and correctness issues found in static analysis
+Key features:
+• Keyboard-driven navigation for fast access to all your bookmarks
+• Extensive theme and layout customization
+• Inbox feature to quickly collect new links and organize them later
+• Lightweight and fast, no heavy dependencies
+• Actively maintained with regular releases
 
-### v1.3.x
-- Added: Dead-link detection
-  </Changes>
+Links:
+• Website: https://www.nextdash.cc
+• Source code and releases: https://github.com/jordibrouwer/nextdash
+• Changelog: https://github.com/jordibrouwer/nextdash/releases
+• Devlog / release updates: https://www.nextdash.cc/blog
+• Also available on GHCR: ghcr.io/jordibrouwer/nextdash:latest
+
+Support: open an issue on GitHub via the Support link above. Bug reports and feature requests are welcome.
+  </Overview>
+
+  <Category>Tools: Productivity: Network:Web</Category>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <!-- Repository points to Docker Hub (foobar1452/nextdash) rather than GHCR
+       so Unraid CA can show Last Update / download stats — GHCR doesn't
+       expose the public registry metadata CA relies on for that. -->
+  <Date>2026-09-02</Date>
 
   <Config Name="WebUI Port"
           Target="8080"
@@ -47,7 +60,7 @@
           Target="/app/data"
           Default="/mnt/user/appdata/nextdash/"
           Mode="rw"
-          Description="Persistent storage path for NextDash data"
+          Description="Persistent storage path for NextDash data (bookmarks, settings)"
           Type="Path"
           Display="always"
           Required="true"
