@@ -43,6 +43,15 @@ Support: open an issue on GitHub via the Support link above. Bug reports and fea
   </Overview>
 
   <Changes>
+### v1.13.1 (2026-09-22)
+- Weather widget: fixed a blank tile — v1.13.0 asked Open-Meteo for the extra readings in a way that dropped the current conditions from the request
+
+### v1.13.0 (2026-09-22)
+- Widgets: a widget set to two columns now shows more, not the same figures larger — the load average behind the processor percentage, the container that is failing by name, used against total disk space, the expiry date of a certificate, what the weather feels like
+- Widgets: row lists run in two columns on a wide tile, and narrow back to one on a one-column dashboard or a phone
+- Weather: the forecast request now also carries apparent temperature, wind, humidity and chance of rain
+- Kept widget: order by most recent, at random or by tag, with each link's address under its title
+
 ### v1.12.0 (2026-09-21)
 - Inbox: Keep (Shift+K) moves a link to a new Kept tab with its note and tags, without filing it on a page
 - Kept: group by site, tag or age, file a whole group at once, or work through links one at a time; rows suggest where a link belongs and which tags fit
@@ -57,7 +66,7 @@ Support: open an issue on GitHub via the Support link above. Bug reports and fea
   <!-- Repository points to Docker Hub (foobar1452/nextdash) rather than GHCR
        so Unraid CA can show Last Update / download stats — GHCR doesn't
        expose the public registry metadata CA relies on for that. -->
-  <Date>2026-09-21</Date>
+  <Date>2026-09-22</Date>
 
   <Config Name="WebUI Port"
           Target="8080"
