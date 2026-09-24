@@ -39,6 +39,9 @@ Links:
 • Changelog: https://github.com/jordibrouwer/nextdash/releases
 • Devlog / release updates: https://www.nextdash.cc/news
 • Also available on GHCR: ghcr.io/jordibrouwer/nextdash:latest
+• User manual: https://github.com/jordibrouwer/nextdash/blob/main/MANUAL.md
+
+The host widgets (Processor, Memory, Disks, Containers) are off until you fill in the optional paths and variables below — they are hidden under Show more settings. Section 11.4 of the manual explains what each one reads.
 
 Support: open an issue on GitHub via the Support link above. Bug reports and feature requests are welcome.
   </Overview>
