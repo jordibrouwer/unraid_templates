@@ -24,7 +24,7 @@ NextDash is a lightweight, self-hosted bookmark dashboard that features a minima
 
 Key features:
 • Keyboard-driven navigation for fast access to all your bookmarks
-• Extensive theme and layout customization, with a look studio beside the dashboard and a theme editor
+• Extensive theme and layout customization, with a theme studio beside the dashboard and a theme editor
 • Inbox to collect new links fast: triage them, or keep them under Bookmarks → Unsorted and file whole groups later
 • Bookmarks view with Health built in: finds broken, stale and duplicate links, with uptime monitoring and downtime alerts
 • Video bookmarks marked in the list, and played in the hover card without leaving the dashboard
@@ -52,6 +52,15 @@ Support: open an issue on GitHub via the Support link above. Bug reports and fea
   </Overview>
 
   <Changes>
+### v1.22.0 (2026-10-25)
+- Appearance: every theme is redrawn with a surface of its own for each material, Aurora Glass is the default and every install moved onto it once, with a way back
+- Backdrops: 75 of them, a pool for each material, and a Quiet centre slider that fades the backdrop behind your bookmarks
+- Appearance: Material style (Signature or Classic), the neutral themes share one accent, and ThinkDashboard Classic is back
+- Keyboard: a cheat sheet you can search, and Shift+G opens Glances from every view
+- Bookmarks: the add and edit form has two columns with a live preview of the card
+- Config: Overview lists the new features since v1.20.3, and its manual link goes to nextdash.cc/docs
+- Fixes: Export CSV and the imports work before Data &amp; backups is opened, Home and End work on tabs and charts, and a focused block title shows its focus
+
 ### v1.21.3 (2026-10-23)
 - Fixes: the Containers view keeps its place in Safari when it refreshes
 
@@ -70,11 +79,6 @@ Support: open an issue on GitHub via the Support link above. Bug reports and fea
 - Dashboard: right-click a category's header to add a bookmark to it, a search keeps the letter you typed, and Escape leaves the bookmark grid
 - Fixes: row checkboxes can be clicked again in Containers and the Inbox, entrance animations no longer stall on a slow load, and uploaded SVGs are served under a sandboxed policy
 
-### v1.20.3 (2026-10-21)
-- Appearance: the dashboard is set in your font preset, Source Code Pro by default, and Config and the other views read in Inter
-- Config: About has Project, Install and News &amp; features tabs, with the version, counts, uptime and a Copy diagnostics button for bug reports
-- Fixes: the text font is Source Code Pro again after v1.20.0 moved it to Inter, and the +N on a tag offer takes the page font
-
   </Changes>
 
   <Category>Tools: Productivity: Network:Web</Category>
@@ -82,7 +86,7 @@ Support: open an issue on GitHub via the Support link above. Bug reports and fea
   <!-- Repository points to Docker Hub (foobar1452/nextdash) rather than GHCR
        so Unraid CA can show Last Update / download stats — GHCR doesn't
        expose the public registry metadata CA relies on for that. -->
-  <Date>2026-10-23</Date>
+  <Date>2026-10-25</Date>
 
   <Config Name="WebUI Port"
           Target="8080"
