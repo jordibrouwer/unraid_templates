@@ -27,14 +27,15 @@ Key features:
 • Extensive theme and layout customization, with a theme studio beside the dashboard, a theme editor and 266 backdrops drawn in the themes' colours
 • Inbox to collect new links fast: triage them, or keep them under Bookmarks → Unsorted and file whole groups later
 • Bookmarks view with Health built in: finds broken, stale and duplicate links, with uptime monitoring and downtime alerts
+• Network checks on a bookmark: TCP, Ping, DNS, TLS, HTTP and JSON on a schedule or once, with the result in the Tests tab, in the bell and on the dashboard. Ping needs ICMP; if it is blocked nextDash falls back to TCP and says so. To allow it, add --sysctl net.ipv4.ping_group_range="0 2147483647" to Extra Parameters (with Host networking set the sysctl on the Unraid host instead)
 • Edit mode: change categories, widgets and pages right on the dashboard
 • A notifications bell: questions, notices and tips wait there, with their age, instead of popping up over your work
 • A checkup and a weekly digest that tell you what needs attention
 • Watch feeds: follow the RSS, Atom or JSON Feed of sites you choose, with news on the bookmark, in its preview card and in a news window
 • An assistant you ask in plain words, on Claude, OpenAI or a server of your own: it looks things up and changes nothing by itself
 • Video bookmarks marked in the list, and played in the hover card without leaving the dashboard
-• Widgets beside your bookmarks: 53 built-in kinds (tabs, clock, countdown, uptime, feeds, weather, disks, containers and more) plus a Custom widget for any JSON API
-• Your media stack on the dashboard: Jellyfin, Sonarr, Radarr, Seerr, qBittorrent and SABnzbd, with the posters from your own library
+• Widgets beside your bookmarks: 57 built-in kinds (tabs, clock, countdown, uptime, feeds, weather, disks, containers and more) plus a Custom widget for any JSON API
+• Your media stack on the dashboard: Jellyfin, Sonarr, Radarr, Seerr, qBittorrent and SABnzbd, with the posters from your own library, and Jellystat, Bazarr and Prowlarr for who watched what, missing subtitles and how your indexers are doing
 • Finds the web apps in your Docker containers and offers them as bookmarks, with an icon and a status check (needs the Docker socket below)
 • Glances on the dashboard: a page for the hosts you run Glances on, with processes, containers, graphs and incidents, and a widget for one host
 • Your Unraid server on the dashboard: seven widgets for the array, parity, shares, VMs, the UPS and notifications, with alerts
@@ -57,6 +58,17 @@ Support: open an issue on GitHub via the Support link above. Bug reports and fea
   </Overview>
 
   <Changes>
+### v1.28.1 (2026-11-11)
+- Widgets: Jellystat (who watched what), Bazarr (missing and fetched subtitles) and Prowlarr (how the indexers are doing), each with a Connect step and parts you can switch off
+- Security: Go 1.26.11 fixes GO-2026-6859 in net/http
+- Docs: the manual, Help and Overview describe the new widgets, with new pictures
+
+### v1.28.0 (2026-11-10)
+- Network tests: a Tests tab on every bookmark with TCP, Ping, DNS, TLS, HTTP detail and JSON checks, once or on a schedule, with chips on the rows, rows in the bell, a widget and a line on the status page
+- Network tests: DNS says when the records change; Ping falls back to TCP when the container cannot send ICMP
+- Bell: a new container's notice is a row in the bell, and the bell is off on a phone
+- Header: the weather beside the clock is larger
+
 ### v1.27.4 (2026-11-09)
 - Appearance: rows, chips, option cards and fields in Config, the list views and the windows follow the theme instead of showing as dark holes
 - Bookmarks: the / in the search box sits inside the field
@@ -73,17 +85,6 @@ Support: open an issue on GitHub via the Support link above. Bug reports and fea
 - Watch feeds: the list is a table with a column head, like Structure
 - Phones: no key legends and no key tips on a touch device without a mouse
 - Docs: the cheat sheet names ? for keys and help
-
-### v1.27.1 (2026-11-08)
-- Screenshots: new pictures for this page and the README, taken on v1.27.0
-- No change to the app itself
-
-### v1.27.0 (2026-11-08)
-- Keyboard: one set of keys for every view; with the cursor on a row, plain letters act on it (e edits, m moves, t tags), Shift plus a letter opens a view
-- Keyboard: a mode strip beside the page name says what your keys do, every view has a key legend, and ? opens keys and help for the page you are on
-- Search: # searches by tag, with AND and OR, and : opens on your recent and most-used commands
-- Themes: Christmas Classic, Northern Lights and Gingerbread Village, with snow and lights
-- Many keys moved: an existing install is told once, and old keys say what replaced them for a while
   </Changes>
 
   <Category>Tools: Productivity: Network:Web</Category>
@@ -91,7 +92,7 @@ Support: open an issue on GitHub via the Support link above. Bug reports and fea
   <!-- Repository points to Docker Hub (foobar1452/nextdash) rather than GHCR
        so Unraid CA can show Last Update / download stats — GHCR doesn't
        expose the public registry metadata CA relies on for that. -->
-  <Date>2026-11-09</Date>
+  <Date>2026-11-11</Date>
 
   <Config Name="WebUI Port"
           Target="8080"
