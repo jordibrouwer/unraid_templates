@@ -58,6 +58,18 @@ Support: open an issue on GitHub via the Support link above. Bug reports and fea
   </Overview>
 
   <Changes>
+### v1.29.1 (2026-11-14)
+- Phone: search opens at once and keeps the tab bar under it, which lifts above the keyboard
+- Phone: RSS headlines open a preview sheet on a touch screen, with buttons to open the article
+- Phone: the Inbox selects are tall enough on an iPhone
+
+### v1.29.0 (2026-11-13)
+- Phone: a tab bar with Home, Search, Inbox, Status and More; Status lists every monitored bookmark and pauses notifications for an hour or until tomorrow morning
+- Phone: two start screens, search first or status first, chosen per device
+- Phone: a compact search sheet, forms made for a thumb, an Inbox made for a thumb, and a press and hold menu on bookmarks
+- Feeds: adding a feed fetches its ten newest posts and opens the news popover on its row, on desktop and phone
+- Layout: a block can show on desktop only or on the phone only, from the edit panel, the block menus and Config → Structure
+
 ### v1.28.3 (2026-11-12)
 - Themes: the eight new theme groups also dress Bookmarks, Inbox, Containers, Glances, Tags and Config, not only the dashboard
 - Themes: the pane of every view is filled like a dashboard column, with the same opacity, in all 440 themes
@@ -72,17 +84,6 @@ Support: open an issue on GitHub via the Support link above. Bug reports and fea
 - Widgets: Jellystat (who watched what), Bazarr (missing and fetched subtitles) and Prowlarr (how the indexers are doing), each with a Connect step and parts you can switch off
 - Security: Go 1.26.11 fixes GO-2026-6859 in net/http
 - Docs: the manual, Help and Overview describe the new widgets, with new pictures
-
-### v1.28.0 (2026-11-10)
-- Network tests: a Tests tab on every bookmark with TCP, Ping, DNS, TLS, HTTP detail and JSON checks, once or on a schedule, with chips on the rows, rows in the bell, a widget and a line on the status page
-- Network tests: DNS says when the records change; Ping falls back to TCP when the container cannot send ICMP
-- Bell: a new container's notice is a row in the bell, and the bell is off on a phone
-- Header: the weather beside the clock is larger
-
-### v1.27.4 (2026-11-09)
-- Appearance: rows, chips, option cards and fields in Config, the list views and the windows follow the theme instead of showing as dark holes
-- Bookmarks: the / in the search box sits inside the field
-- Config: Monitoring, Unraid, Status page, Containers and AI Assistant open with a clearer first paragraph
   </Changes>
 
   <Category>Tools: Productivity: Network:Web</Category>
@@ -90,7 +91,7 @@ Support: open an issue on GitHub via the Support link above. Bug reports and fea
   <!-- Repository points to Docker Hub (foobar1452/nextdash) rather than GHCR
        so Unraid CA can show Last Update / download stats — GHCR doesn't
        expose the public registry metadata CA relies on for that. -->
-  <Date>2026-11-12</Date>
+  <Date>2026-11-14</Date>
 
   <Config Name="WebUI Port"
           Target="8080"
