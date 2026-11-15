@@ -58,6 +58,13 @@ Support: open an issue on GitHub via the Support link above. Bug reports and fea
   </Overview>
 
   <Changes>
+### v1.29.2 (2026-11-15)
+- Monitoring: network checks draw their response time, a small line per check and a 24 hour, 7 day or 30 day chart in the Tests tab
+- Bookmarks: a suggested name loses a login word or the site's own name, with an arrow to bring the page's own title back
+- Digest: the weekly digest opens with the week in a few plain sentences
+- Feeds: the news badge stays until the news is read, and the news window is an hour by default
+- Inbox: rows that load late still rise in
+
 ### v1.29.1 (2026-11-14)
 - Phone: search opens at once and keeps the tab bar under it, which lifts above the keyboard
 - Phone: RSS headlines open a preview sheet on a touch screen, with buttons to open the article
@@ -79,11 +86,6 @@ Support: open an issue on GitHub via the Support link above. Bug reports and fea
 - Backdrops: eighteen new backdrops, each drawn for one family
 - Layout: page margins in seven steps, columns per row as a dropdown from 1 to 8, and five and six columns work on a wide window
 - Bookmarks view: the Latest news column is gone
-
-### v1.28.1 (2026-11-11)
-- Widgets: Jellystat (who watched what), Bazarr (missing and fetched subtitles) and Prowlarr (how the indexers are doing), each with a Connect step and parts you can switch off
-- Security: Go 1.26.11 fixes GO-2026-6859 in net/http
-- Docs: the manual, Help and Overview describe the new widgets, with new pictures
   </Changes>
 
   <Category>Tools: Productivity: Network:Web</Category>
@@ -91,7 +93,7 @@ Support: open an issue on GitHub via the Support link above. Bug reports and fea
   <!-- Repository points to Docker Hub (foobar1452/nextdash) rather than GHCR
        so Unraid CA can show Last Update / download stats — GHCR doesn't
        expose the public registry metadata CA relies on for that. -->
-  <Date>2026-11-14</Date>
+  <Date>2026-11-15</Date>
 
   <Config Name="WebUI Port"
           Target="8080"
