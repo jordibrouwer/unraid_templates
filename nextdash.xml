@@ -28,13 +28,14 @@ Key features:
 • Inbox to collect new links fast: triage them, or keep them under Bookmarks → Unsorted and file whole groups later
 • Bookmarks view with Health built in: finds broken, stale and duplicate links, with uptime monitoring and downtime alerts
 • Network checks on a bookmark: TCP, Ping, DNS, TLS, HTTP and JSON on a schedule or once, with the result in the Tests tab, in the bell and on the dashboard. Ping needs ICMP; if it is blocked nextDash falls back to TCP and says so. To allow it, add --sysctl net.ipv4.ping_group_range="0 2147483647" to Extra Parameters (with Host networking set the sysctl on the Unraid host instead)
+• A Service overview for each service, and a Timeline that puts outages, updates and incidents in one stream with the likely cause
 • Edit mode: change categories, widgets and pages right on the dashboard, and put a widget on every page with one switch
 • A notifications bell: questions, notices and tips wait there, with their age, instead of popping up over your work
 • A checkup and a weekly digest that tell you what needs attention
 • Watch feeds: follow the RSS, Atom or JSON Feed of sites you choose, with news on the bookmark, in its preview card and in a news window
 • An assistant you ask in plain words, on Claude, OpenAI or a server of your own: it looks things up and changes nothing by itself
 • Video bookmarks marked in the list, and played in the hover card without leaving the dashboard
-• Widgets beside your bookmarks: 63 built-in kinds (tabs, clock, countdown, uptime, feeds, weather, disks, containers and more) plus a Custom widget for any JSON API
+• Widgets beside your bookmarks: 64 built-in kinds (tabs, clock, countdown, timer, uptime, feeds, weather, disks, containers and more) plus a Custom widget for any JSON API
 • Your media stack on the dashboard: Jellyfin, Sonarr, Radarr, Seerr, qBittorrent and SABnzbd, with the posters from your own library, and your Immich photos as a frame, a slideshow, albums, people and a server status, and Jellystat, Bazarr and Prowlarr for who watched what, missing subtitles and how your indexers are doing
 • Finds the web apps in your Docker containers and offers them as bookmarks, with an icon and a status check (needs the Docker socket below), and up to four more Docker hosts as tabs in the Containers view
 • Glances on the dashboard: a page for the hosts you run Glances on, with processes, containers, graphs and incidents, and a widget for one host
@@ -58,6 +59,24 @@ Support: open an issue on GitHub via the Support link above. Bug reports and fea
   </Overview>
 
   <Changes>
+### v1.33.0 (2026-11-23)
+- Containers: a Service overview per service, with status, uptime, the container, logs and a timeline of what happened
+- Monitoring: Config → Timeline puts outages, updates and incidents in one stream, with the likely cause of each outage
+- Widgets: a Timer widget (kitchen timer and pomodoro), and actions in the Seerr, Sonarr, Radarr, qBittorrent, SABnzbd, Pi-hole and AdGuard Home tiles
+- Monitoring: outages ring the bell at once and show in the tab title, and certificate warnings can be set to only when expired, per host
+- Bookmarks: label rows between bookmarks, and a domain date typed by hand when a registry gives none
+
+### v1.32.0 (2026-11-19)
+- Search: small tools in the search panel for subnets, hashes, base64, UUIDs, passwords, ports, chmod and cron lines
+- Widgets: clean up titles in the RSS widget and in Watch feeds with a pattern
+- Bookmarks: the "This weekend" reminder picks the coming Saturday or Sunday
+- Containers: Compose fixes, such as Apply waiting for a save in progress and the ports of an override file adding up
+
+### v1.31.0 (2026-11-17)
+- Containers: read, edit, check and run a Compose stack from the Containers view, with backups of each file
+- Bookmarks: reminders on bookmarks, and related links on the preview card
+- Keys: Shift+V opens What's new
+
 ### v1.30.0 (2026-11-16)
 - Containers: up to four more Docker hosts, each as a tab above the list, read-only until you allow actions
 - Widgets: five Immich widgets (photos, slideshow, albums, people, status) and a bell row for failed Immich jobs
@@ -72,22 +91,6 @@ Support: open an issue on GitHub via the Support link above. Bug reports and fea
 - Digest: the weekly digest opens with the week in a few plain sentences
 - Feeds: the news badge stays until the news is read, and the news window is an hour by default
 - Inbox: rows that load late still rise in
-
-### v1.29.1 (2026-11-14)
-- Phone: search opens at once and keeps the tab bar under it, which lifts above the keyboard
-- Phone: RSS headlines open a preview sheet on a touch screen, with buttons to open the article
-- Phone: the Inbox selects are tall enough on an iPhone
-
-### v1.29.0 (2026-11-13)
-- Phone: a tab bar with Home, Search, Inbox, Status and More; Status lists every monitored bookmark and pauses notifications for an hour or until tomorrow morning
-- Phone: two start screens, search first or status first, chosen per device
-- Phone: a compact search sheet, forms made for a thumb, an Inbox made for a thumb, and a press and hold menu on bookmarks
-- Feeds: adding a feed fetches its ten newest posts and opens the news popover on its row, on desktop and phone
-- Layout: a block can show on desktop only or on the phone only, from the edit panel, the block menus and Config → Structure
-
-### v1.28.3 (2026-11-12)
-- Themes: the eight new theme groups also dress Bookmarks, Inbox, Containers, Glances, Tags and Config, not only the dashboard
-- Themes: the pane of every view is filled like a dashboard column, with the same opacity, in all 440 themes
   </Changes>
 
   <Category>Tools: Productivity: Network:Web</Category>
@@ -95,7 +98,7 @@ Support: open an issue on GitHub via the Support link above. Bug reports and fea
   <!-- Repository points to Docker Hub (foobar1452/nextdash) rather than GHCR
        so Unraid CA can show Last Update / download stats — GHCR doesn't
        expose the public registry metadata CA relies on for that. -->
-  <Date>2026-11-16</Date>
+  <Date>2026-11-23</Date>
 
   <Config Name="WebUI Port"
           Target="8080"
