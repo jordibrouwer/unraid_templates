@@ -59,6 +59,14 @@ Support: open an issue on GitHub via the Support link above. Bug reports and fea
   </Overview>
 
   <Changes>
+### v1.34.0 (2026-11-24)
+- Dashboard: Quick launch, a panel with your bookmarks that opens on Shift+Q, a corner button or circles drawn with the mouse
+- Monitoring: a bookmark can ignore an error, for good or for 30 days, and the tile, the bell, the counts and the alerts stay quiet
+- Monitoring: the Timeline reads at a glance, with a colour and icon per source, a 24 hour strip per day and a chain from cause to outage
+- Keys: o opens the related links of a bookmark and b puts a label above it
+- Containers: the Compose view masks short secret names such as DB_PW
+- Bookmarks: a moved bookmark keeps its reminder
+
 ### v1.33.0 (2026-11-23)
 - Containers: a Service overview per service, with status, uptime, the container, logs and a timeline of what happened
 - Monitoring: Config → Timeline puts outages, updates and incidents in one stream, with the likely cause of each outage
@@ -84,13 +92,6 @@ Support: open an issue on GitHub via the Support link above. Bug reports and fea
 - Bookmarks: a link dragged in from another window onto a category opens the bookmark form filled in
 - Phone: a Watch feeds switch in More
 - Themes: three more Christmas themes, Snow Globe, Paper Advent and Nutcracker Theatre
-
-### v1.29.2 (2026-11-15)
-- Monitoring: network checks draw their response time, a small line per check and a 24 hour, 7 day or 30 day chart in the Tests tab
-- Bookmarks: a suggested name loses a login word or the site's own name, with an arrow to bring the page's own title back
-- Digest: the weekly digest opens with the week in a few plain sentences
-- Feeds: the news badge stays until the news is read, and the news window is an hour by default
-- Inbox: rows that load late still rise in
   </Changes>
 
   <Category>Tools: Productivity: Network:Web</Category>
@@ -98,7 +99,7 @@ Support: open an issue on GitHub via the Support link above. Bug reports and fea
   <!-- Repository points to Docker Hub (foobar1452/nextdash) rather than GHCR
        so Unraid CA can show Last Update / download stats — GHCR doesn't
        expose the public registry metadata CA relies on for that. -->
-  <Date>2026-11-23</Date>
+  <Date>2026-11-24</Date>
 
   <Config Name="WebUI Port"
           Target="8080"
